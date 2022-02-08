@@ -1,0 +1,8 @@
+@use "src/scss/abstracts/mixins" as *;
+
+.catList {
+  @include respond(small) {
+    display: flex;
+    align-items: center;
+  }
+}

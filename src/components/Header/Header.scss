@@ -1,0 +1,123 @@
+@use "src/scss/abstracts/mixins" as *;
+
+$zIndex_header: 500;
+
+.header {
+  background-color: var(--secondary-color);
+  color: #fff;
+  transition: all 0.4s;
+  position: relative;
+  z-index: $zIndex_header;
+}
+
+.header__bg--black {
+  background-color: #000;
+}
+
+.header__inner {
+  height: var(--height-nav);
+  border-bottom: 1px solid #5d5d5d4b;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__menu {
+  margin-right: 3rem;
+}
+
+.header__logo {
+  @include respond(small) {
+    margin-right: auto;
+  }
+  @include respond(large) {
+    margin-right: 0;
+  }
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: $zIndex_header;
+  background-color: #000;
+  border-bottom: none;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.7);
+
+  .header__inner {
+    border-bottom: none;
+    height: 8rem;
+  }
+}
+
+.sidenav-modal {
+  background-color: #fff;
+  color: #000;
+  position: fixed;
+  left: 0;
+  top: 10rem;
+  height: 100%;
+  width: 30rem;
+  max-width: 60%;
+  padding: 2rem 1.5rem;
+  z-index: 700;
+
+  &--up {
+    top: 8rem;
+  }
+}
+
+.backdrop {
+  background-color: hsla(0, 0%, 0%, 0.6);
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 100;
+}
+
+.header__cart {
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  margin-top: 4rem;
+  z-index: 1100;
+
+  @include respond(small) {
+    max-width: 42rem;
+    right: 0;
+  }
+}
+
+.header__btnCart {
+  position: relative;
+}
+
+.header__hint {
+  position: absolute;
+  width: 3.4rem;
+  height: 3.4rem;
+  color: #fff;
+  font-size: 1.3rem;
+  border-radius: 50%;
+  top: 0;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    opacity: 0.5;
+    z-index: -1;
+  }
+}

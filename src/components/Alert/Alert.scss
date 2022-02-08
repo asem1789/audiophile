@@ -1,0 +1,49 @@
+.toaster {
+  position: fixed;
+  top: 20px;
+  left:  20px;
+  right:  20px;
+  bottom:  20px;
+  z-index: 9999;
+  pointer-events: none;
+
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: start;
+}
+
+.alert + .alert {
+  margin-bottom: 0.5rem;
+}
+
+.alert {
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  box-shadow: 0 0 0.5rem 0.3rem rgba(0, 0, 0, 0.4);
+  font-size: 1.6rem;
+  font-weight: 600;
+  pointer-events: auto;
+  width: fit-content;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+
+  animation: alertDown .4s linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes alertDown {
+  0% {
+    top: -6rem;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}

@@ -1,0 +1,34 @@
+.category {
+
+  &__header {
+    width: 100%;
+    height: 25rem;
+    color: #fff;
+    background-color: #000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  &__title {
+    color: #fff;
+    font-size: 4.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  &__list {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__sectionNav{
+    margin-top: 5rem;
+  }
+
+}

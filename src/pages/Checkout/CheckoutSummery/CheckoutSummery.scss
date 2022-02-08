@@ -1,0 +1,102 @@
+.summery {
+  background-color: #fff;
+  border-radius: 0.8rem;
+  padding: 2.5rem;
+
+  &__header {
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--secondary-color);
+    margin-bottom: 2rem;
+  }
+
+  &__list {
+    margin-bottom: 3rem;
+    max-height: 35rem;
+    overflow: auto;
+    padding-right: 1rem;
+  }
+
+  &__item + &__item {
+    margin-top: 1.5rem;
+  }
+
+  &__imgBox {
+    margin-right: 1.4rem;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 0.8rem;
+    overflow: hidden;
+  }
+
+  &__info {
+    margin-right: auto;
+  }
+
+  &__name {
+    display: block;
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: var(--secondary-color);
+    margin-right: 0.8rem;
+    cursor: pointer;
+    transition: all 0.4s;
+
+    &:hover,
+    &:active {
+      color: var(--primary-color);
+    }
+  }
+
+  &__price {
+    display: block;
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: #808080;
+  }
+
+  &__quantity {
+    font-size: 1.3rem;
+    color: #808080;
+    align-self: flex-start;
+  }
+
+  &__costs {
+    margin-bottom: 2rem;
+    font-size: 1.4rem;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__term,
+  &__detail {
+    width: 50%;
+  }
+
+  &__term {
+    color: #808080;
+    text-transform: uppercase;
+  }
+
+  &__detail {
+    font-weight: 700;
+    text-align: right;
+
+    &--colored {
+      color: var(--primary-color);
+    }
+  }
+}
+
+// style for layout
+
+.fx {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.fx-col {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,51 @@
+@use "src/scss/abstracts/mixins" as *;
+
+.product {
+  &__suggest {
+    text-align: center;
+    margin-bottom: 15rem;
+  }
+
+  &__suggestList {
+    margin-top: 6rem;
+    display: flex;
+    flex-direction: column;
+
+    @include respond(small) {
+      flex-direction: row;
+    }
+  }
+
+  &__suggestItem {
+    @include respond(small) {
+      width: 32%;
+    }
+  }
+
+  &__suggestItem + &__suggestItem {
+    margin-top: 6rem;
+
+    @include respond(small) {
+      margin-top: 0;
+      margin-left: calc(100% - (32% * 3));
+    }
+  }
+
+  &__suggestList__imgWrapper {
+    background-color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  &__suggestList__imgBox {
+    width: 50%;
+  }
+
+  &__suggestProduct-title {
+    margin-top: 2.4rem;
+    margin-bottom: 2.4rem;
+  }
+}

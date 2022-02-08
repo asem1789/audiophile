@@ -1,0 +1,11 @@
+@use "scss/abstracts/mixins" as *;
+
+.App {
+  @include respond(mid) {
+    font-size: 1.4rem;
+  }
+
+  @include respond(large) {
+    font-size: 1.6rem;
+  }
+}

@@ -1,0 +1,185 @@
+@use "../abstracts/mixins" as *;
+
+/* ----- Reusable Style */
+.row {
+  max-width: var(--width-main);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// ==============================
+// Buttons component
+.btn {
+  background: none;
+  border: 0;
+  cursor: pointer;
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+
+  &_menu {
+    font-size: 2.6rem;
+    font-weight: 600;
+    transition: all 0.4s;
+
+    &:hover,
+    &:active {
+      color: var(--primary-color);
+    }
+  }
+}
+
+.headingPrimary {
+  font-size: 3.3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 1.2em; // check
+
+  @include respond(small) {
+    font-size: 4.6rem;
+  }
+}
+
+.headingSecondary {
+  font-size: 2.3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000;
+  line-height: 1.2em; // check
+  letter-spacing: 1px;
+
+  @include respond(small) {
+    font-size: 2.6rem;
+  }
+}
+
+.headingTertiary {
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000;
+  line-height: 1.2em; // check
+  letter-spacing: 1px;
+
+  @include respond(small) {
+    font-size: 2.4rem;
+  }
+}
+
+.btn__secondary {
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding: 1rem 2.5rem;
+  text-transform: uppercase;
+  margin-top: 2rem;
+  color: #fff;
+  background-color: var(--secondary-color);
+  transition: all 0.4s;
+  cursor: pointer;
+
+  &:hover,
+  &:active {
+    background-color: #2c2c2c;
+  }
+}
+
+.btn__tertiary {
+  font-size: 1.4rem;
+  max-width: 17rem;
+  font-weight: 600;
+  padding: 1rem 2.5rem;
+  text-transform: uppercase;
+  margin-top: 2rem;
+  color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+  transition: all 0.4s;
+  cursor: pointer;
+
+  &:hover,
+  &:active {
+    background-color: var(--secondary-color);
+    color: #fff;
+  }
+}
+
+.section-card {
+  padding: 2rem;
+  border-radius: 0.8rem;
+
+  @include respond(small) {
+    padding-left: 6rem;
+  }
+
+  @include respond(mid) {
+    padding-left: 8rem;
+  }
+}
+
+//override antd
+.btn__primary {
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding: 1rem 2.5rem;
+  height: auto;
+  text-transform: uppercase;
+}
+
+.fx-wrap {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+// override antd button
+
+a {
+  text-decoration: none;
+}
+
+input,
+button,
+select,
+optgroup,
+textarea {
+  margin: 0;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: inherit;
+}
+
+.ant-btn {
+  line-height: 1.5715;
+  position: relative;
+  display: inline-block;
+  font-weight: 400;
+  white-space: nowrap;
+  text-align: center;
+  background-image: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  -webkit-user-select: none;
+}
+
+.ant-btn,
+.ant-btn:active,
+.ant-btn:focus {
+  outline: 0;
+}
+
+.ant-btn-primary {
+  color: #fff;
+  border-color: #d97e4a;
+  background: #d97e4a;
+  text-shadow: 0 -1px 0 rgb(0 0 0 / 12%);
+  box-shadow: 0 2px 0 rgb(0 0 0 / 5%);
+}
+
+.ant-btn-primary:hover, .ant-btn-primary:focus {
+  color: #fff;
+  border-color: #e6a173;
+  background: #e6a173;
+}

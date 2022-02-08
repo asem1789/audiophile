@@ -1,0 +1,49 @@
+@use "src/scss/abstracts/mixins" as *;
+
+.sidenav {
+
+  padding-top: 2rem;
+
+  &__link {
+    font-size: 1.4rem;
+    font-weight: 700;
+    padding: 1rem 2rem;
+    color: var(--secondary-color);
+    transition: all 0.4s;
+
+    &:hover,
+    &:active {
+      color: var(--primary-color);
+    }
+  }
+
+  &__link--home {
+    margin-bottom: 3rem;
+    display: inline-block;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+
+  &__imgBox {
+    width: 6rem;
+    margin-right: 1rem;
+
+    @include respond(small){
+      width: 8rem;
+    }
+
+    @include respond(mid){
+      width: 10rem;
+    }
+  }
+
+  &__text {
+    text-transform: uppercase;
+  }
+}

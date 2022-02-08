@@ -1,0 +1,114 @@
+@use "src/scss/abstracts/mixins" as *;
+
+.productPrev {
+  display: flex;
+  flex-direction: column;
+
+  @include respond(large) {
+    flex-direction: row;
+    align-content: center;
+    gap: 15rem;
+  }
+
+  &:nth-of-type(even) {
+    @include respond(large) {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__imgWrapper {
+    background-color: #f1f1f1;
+
+    display: flex;
+    justify-content: center;
+
+    @include respond(large) {
+      width: 50%;
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  &__imgBox {
+    width: 30rem;
+
+    @include respond(large) {
+      width: 100%;
+      flex-direction: row;
+    }
+  }
+
+  &__content {
+    margin-top: 4rem;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include respond(large) {
+      margin-top: 0;
+      text-align: left;
+
+      align-items: flex-start;
+      justify-content: center;
+    }
+  }
+
+  &__title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #000;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+
+    max-width: 30rem;
+  }
+
+  &__desc {
+    font-size: 1.4rem;
+    max-width: 53rem;
+  }
+
+  &__isNew {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    letter-spacing: 0.8rem;
+    word-spacing: 1.6rem;
+    text-transform: uppercase;
+  }
+
+  &__price {
+    font-size: 1.6rem;
+    font-weight: 700;
+  }
+
+  &__controls {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+
+    gap: 1rem;
+  }
+}
+
+.productPrev + .productPrev {
+  margin-top: 6rem;
+}
+
+// Component isDetail: true;
+
+.productPrev--detail {
+  @include respond(mid) {
+    flex-direction: row;
+    align-content: flex-start;
+    gap: 15rem;
+  }
+
+  .productPrev__content {
+    text-align: left;
+    align-items: flex-start;
+  }
+}

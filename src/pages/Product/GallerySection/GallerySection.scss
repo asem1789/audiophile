@@ -1,0 +1,33 @@
+@use "src/scss/abstracts/mixins" as *;
+
+.product {
+  &__gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 9rem;
+
+    @include respond(small) {
+      flex-direction: row;
+      gap: 0;
+    }
+  }
+
+  &__gallery__side-1 {
+    min-width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__gallery__side-2 {
+    @include respond(small) {
+      min-width: 58%;
+      margin-left: 2%;
+    }
+  }
+
+  &__gallery__imgBox-1 + &__gallery__imgBox-1 {
+    margin-top: 2rem;
+  }
+}

@@ -1,0 +1,93 @@
+@use "src/scss/abstracts/mixins" as *;
+
+.checkout {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  background-color: #f0f0f0;
+
+  &__title {
+    margin-bottom: 3rem;
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    @include respond(large) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__sectionForm {
+    background-color: #fff;
+    padding: 2.4rem;
+    border-radius: 1rem;
+
+    flex: 2;
+  }
+
+  &__sectionSummery {
+    flex: 1;
+  }
+
+  &__fieldset {
+    border: unset;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+
+    legend {
+      color: var(--primary-color);
+      font-weight: 700;
+      font-size: 1.6rem;
+    }
+  }
+
+  &__fieldset + &__fieldset {
+    margin-top: 4.4rem;
+  }
+
+  &__controlGroup {
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+
+    @include respond(mid) {
+      width: 48%;
+
+      &:nth-of-type(2n) {
+        margin-left: 4%;
+      }
+    }
+  }
+
+  &__address {
+    margin-bottom: 2rem;
+  }
+
+  &__payment-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+  }
+
+  &__moneyInfo {
+    width: 100%;
+    margin-top: 3rem;
+
+    @include respond(mid) {
+      display: flex;
+    }
+  }
+}
+
+.checkout-col {
+  display: block;
+  width: 100%;
+
+  @include respond(mid) {
+    width: 48%;
+  }
+}

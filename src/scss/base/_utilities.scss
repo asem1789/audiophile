@@ -1,0 +1,61 @@
+@use "../abstracts/mixins" as *;
+
+.padding-main-x {
+  padding-left: var(--space-x-small);
+  padding-right: var(--space-x-small);
+
+  @include respond(small) {
+    padding-left: var(--space-x-big);
+    padding-right: var(--space-x-big);
+  }
+}
+
+.hide-gt-lg {
+  @include respond(large) {
+    display: none;
+  }
+}
+
+.hide-lt-lg {
+  @include respond(lt-lg) {
+    display: none;
+  }
+}
+
+.mt-3 {
+  margin-top: 2.4rem;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+.mb-2 {
+  margin-bottom: 1.5rem;
+}
+.mb-3 {
+  margin-bottom: 2.4rem;
+}
+.mb-4 {
+  margin-bottom: 3.6rem;
+}
+.mb-5 {
+  margin-bottom: 4rem;
+}
+.mb-6 {
+  margin-bottom: 10rem;
+}
+
+.border-r-sm {
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+
+.width-100 {
+  width: 100% !important;
+}
+
+.d-block {
+  display: block !important;
+}
+

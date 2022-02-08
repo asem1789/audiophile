@@ -1,0 +1,198 @@
+@use "src/scss/abstracts/mixins" as *;
+
+.home {
+  font-size: 1.4rem;
+  color: #fff;
+
+  &__sectionMain {
+    background-color: var(--secondary-color);
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+
+    &__p {
+      @include respond(large) {
+        max-width: 32rem;
+      }
+    }
+
+    &__inner {
+      position: relative;
+    }
+
+    &__imgBox {
+      width: 60rem;
+      position: absolute;
+      top: -2rem;
+      right: 50%;
+      transform: translateX(50%);
+
+      @include respond(small) {
+        width: 68rem;
+      }
+
+      @include respond(large) {
+        right: 0;
+        transform: translateX(0);
+      }
+    }
+
+    &__content {
+      text-align: center;
+      position: absolute;
+      top: 11rem;
+      left: 50%;
+      transform: translate(-50%);
+      color: #fff;
+
+      @include respond(large) {
+        left: 0;
+        transform: translateX(0);
+        text-align: left;
+        top: 10rem;
+        text-align: left;
+      }
+    }
+
+    &__copy-small {
+      display: inline-block;
+      font-weight: 400;
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      word-spacing: 1.5rem;
+      letter-spacing: 1.1rem;
+      color: gray;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.home__sectionList {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+
+.home__section-zx9 {
+  width: 100%;
+  margin-bottom: 5rem;
+
+  &__inner {
+    background-color: var(--primary-color);
+    border-radius: 0.8rem;
+    padding: 5rem 2rem 5rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__content {
+    z-index: 3;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include respond(large) {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+
+  &__imgBox {
+    width: 15rem;
+    margin-bottom: 3rem;
+
+    @include respond(large) {
+      width: 30rem;
+      position: absolute;
+      left: 45%;
+      bottom: -10rem;
+      transform: translateX(-100%);
+    }
+  }
+
+  &__copyBox {
+    @include respond(large) {
+      text-align: left;
+      padding-left: 50%;
+    }
+  }
+}
+
+// #bababa #eeeeee  #dcdcdc
+.home__section-zx7 {
+  padding: 2rem;
+  border-radius: 0.8rem;
+  background: linear-gradient(to left, #bababa, #eeeeee, #dcdcdc);
+  height: 30rem;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 5rem;
+
+  @include respond(small) {
+    padding-left: 6rem;
+  }
+
+  @include respond(mid) {
+    padding-left: 8rem;
+  }
+
+  &__inner {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__imgBox {
+    width: 38rem;
+    position: absolute;
+    right: -18rem;
+    top: 0;
+
+    @include respond(large) {
+      width: 60rem;
+      right: 0;
+      top: -16rem;
+    }
+  }
+}
+
+.home__section-yx1 {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 5rem;
+
+  @include respond(small) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__left {
+    width: 100%;
+    height: 25rem;
+    background-image: url("../../assets/images//yx1-wireless-earphones-gallery-2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include respond(small) {
+      width: 48%;
+    }
+  }
+
+  &__right {
+    background-color: #f1f1f1;
+    width: 100%;
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include respond(small) {
+      width: 48%;
+    }
+  }
+}
